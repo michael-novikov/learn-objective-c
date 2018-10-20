@@ -14,6 +14,18 @@ int main(int argc, const char * argv[]) {
         int secondNumber = 3;
         int totalSum = firstNumber + secondNumber;
         NSLog(@"The sum of %d and %d is %d", firstNumber, secondNumber, totalSum);
+        
+        int product = firstNumber * secondNumber;
+        NSLog(@"The product of %d and %d is %d", firstNumber, secondNumber, product);
+        
+        float firstFloat = 2.5;
+        float square = firstFloat * firstFloat;
+        NSLog(@"The square of %f is %f", firstFloat, square);
+        
+        float secondFloat = 1.3;
+        int sub = firstFloat - secondFloat;
+        NSLog(@"The subtraction of %f and %f as integer is %d", firstFloat, secondFloat, sub);
+        
     }
     return 0;
 }
