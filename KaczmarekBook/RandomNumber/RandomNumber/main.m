@@ -17,16 +17,19 @@ int main(int argc, const char * argv[]) {
         BOOL keepPlaying = YES;
         char yesNo = ' ';
         
+        int countPlaying = 0;
         while (keepPlaying) {
+            ++countPlaying;
             randomNumber = (arc4random() % 101);
-            NSLog(@"The random number to guess is: %d", randomNumber);
+            int countGuessing = 0;
             while (continueGuessing) {
+                ++countGuessing;
                 NSLog(@"Pick a number between 0 and 100. ");
                 scanf("%d", &userGuess);
                 fgetc(stdin); // remove CR/LF i.e extra character
                 if (userGuess == randomNumber) {
                     continueGuessing = NO;
-                    NSLog(@"Correct number!");
+                    NSLog(@"Correct number! You guessed %d times.", countGuessing);
                 }
                 else if (userGuess > randomNumber) {
                     NSLog(@"Your guess is too high");
@@ -39,6 +42,7 @@ int main(int argc, const char * argv[]) {
             yesNo = fgetc(stdin);
             if (yesNo == 'N' || yesNo == 'n') {
                 keepPlaying = FALSE;
+                NSLog(@"You played %d times. Good bye!", countPlaying);
             }
             
             continueGuessing = TRUE;
