@@ -10,8 +10,9 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSLog(@"The Eagle has landed.");
+        NSLog(@"That's one smal step for man, one giant leap for mankind.");
+        NSLog(@"I'm in love with Objective-C");
     }
     return 0;
 }
